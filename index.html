@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; transition: 10s;" id="e">
+    <h1 id="idk" style="color: white; transition: 1s; text-align: center; position:fixed; top: 100px;left: 450px; font-size: 70px;">We will be right back</h1>
+  <h1 id="EA" style="display: none;"></h1>
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script>
+        function e(){
+            document.getElementById("idk").style.color = "WHITE";
+        }
+        function uhh(){
+            document.getElementById("idk").style.color = "BLACK";
+            let white = "WHITE"
+            setTimeout(e, 1000)
+        }
+        
+        setInterval(uhh,2000)
+    </script>
+  <script>
+        let url = "http://5.206.21.6:5500/status.json"
+        let tries
+        $.getJSON(url,function(data){
+            document.getElementById("EA").textContent = data.status
+        });
+        resul = document.getElementById("EA").textContent
+        let hmm;
+        function waiting(){
+            hmm = document.getElementById("EA").textContent
+            if(hmm=="working"){
+                //ill do something here but not now
+                location.replace("https://google.com")
+            }
+            else if(hmm=="notworking"){
+                //nothing as expected
+            }
+        } 
+        for (let i=0;i <10000000000; i++) { task(i); } function task(i) { setTimeout(function() {
+            waiting()}, 1000 * i); }
+        
+    </script>
+</body>
+</html>
