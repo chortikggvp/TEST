@@ -20,8 +20,6 @@
         }
         
         setInterval(uhh,2000)
-    </script>
-  <script>
         let url = "http://5.206.21.6:5500/status.json"
         let tries
         $.getJSON(url,function(data){
@@ -39,9 +37,8 @@
                 //nothing as expected
             }
         } 
-        for (let i=0;i <10000000000; i++) { task(i); } function task(i) { setTimeout(function() {
+        for (let i=0;i <100; i++) { task(i); } function task(i) { setTimeout(function() {
             waiting()}, 1000 * i); }
-        
     </script>
 </body>
 </html>
